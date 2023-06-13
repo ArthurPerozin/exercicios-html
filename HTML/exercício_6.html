@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Agência de Viagens</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            align-items: center;
+        }
+        
+        header {
+            background-color: #003153;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+        
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav li {
+            margin: 0 10px;
+        }
+        
+        a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .destination {
+            flex-basis: calc(33.33% - 20px);
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+        
+        .destination:hover {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .destination img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .destination h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .destination p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        
+        .destination a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            border: 2px solid #333;
+            border-radius: 5px;
+            padding: 8px 16px;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+        
+        .destination a:hover {
+            background-color: #00406e;
+            color: #fff;
+        }
+        
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            border: 30px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        footer {
+            background-color: #00406e;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        footer p {
+            font-size: 14px;
+        }
+        
+        #origin {
+            padding: 30px;
+        }
+        
+        .fundo {
+            background-color: #00406e;
+        }
+
+        /* Estilos para o formulário de busca */
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #003153;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Estilos para os destinos */
+        .destination-text {
+            margin-top: 10px;
+        }
+
+        .destination h3 {
+            font-size: 20px;
+        }
+
+        .destination p {
+            font-size: 14px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo à Agência de Viagens</h1>
+        <p>Descubra destinos incríveis ao redor do mundo!</p>
+    </header>
+
+    <nav class="fundo">
+        <ul class="fundo">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Destinos</a></li>
+            <li><a href="#">Pacotes</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav>
+    <br>
+    <main>
+        <div class="container">
+            <form>
+                <label for="origem">Origem:</label>
+                <input type="text" id="origem" name="origem" required>
+
+                <label for="destino">Destino:</label>
+                <input type="text" id="destino" name="destino" required>
+
+                <label for="data-saida">Data de Saída:</label>
+                <input type="date" id="data-saida" name="data-saida" required>
+
+                <label for="data-retorno">Data de Retorno:</label>
+                <input type="date" id="data-retorno" name="data-retorno" required>
+
+                <input type="submit" value="Buscar">
+            </form>
+            <br>
+            <br>
+            <br>
+
+            <div class="destination">
+                <img class="imagem_max" src="https://example.com/paris.jpg" alt="Destino 1">
+                <div class="destination-text">
+                    <h3>Paris, França</h3>
+                    <p>Descubra a Cidade do Amor com suas belezas arquitetônicas e cultura rica.</p>
+                    <a href="#">Saiba mais</a>
+                </div>
+            </div>
+            <div class="destination">
+                <img src="" alt="Destino 2">
+                <div class="destination-text">
+                    <h3>Rio de Janeiro, Brasil</h3>
+                    <p>Explore as praias deslumbrantes e o famoso Cristo Redentor.</p>
+                    <a href="#">Saiba mais</a>
+                </div>
+            </div>
+            <div class="destination">
+                <img src="destino3.jpg" alt="Destino 3">
+                <div class="destination-text">
+                    <h3>Tóquio, Japão</h3>
+                    <p>Mergulhe na cultura japonesa e experimente a modernidade desta cidade fascinante.</p>
+                    <a href="#">Saiba mais</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Agência de Viagens. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
